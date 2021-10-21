@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 21, 2021 at 08:28 AM
+-- Generation Time: Oct 21, 2021 at 08:42 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -33,6 +33,7 @@ CREATE TABLE `drugs` (
   `type` varchar(100) NOT NULL,
   `barcode` int(11) NOT NULL,
   `dose` int(11) NOT NULL,
+  `code` int(11) NOT NULL,
   `cost_price` float NOT NULL,
   `selling_pricve` float NOT NULL,
   `expiry` tinyint(1) NOT NULL,
@@ -47,10 +48,10 @@ CREATE TABLE `drugs` (
 -- Dumping data for table `drugs`
 --
 
-INSERT INTO `drugs` (`id`, `name`, `type`, `barcode`, `dose`, `cost_price`, `selling_pricve`, `expiry`, `company_name`, `production_date`, `expiration_date`, `place`, `quantity`) VALUES
-(1, 'Astra', 'vaccine', 1, 1, 1000, 1200, 0, 'AstraZeneca', '2021-03-03', '2021-10-13', 'UK', 10),
-(2, 'Moderna', 'vaccine', 2, 1, 900, 1000, 0, 'AstraZeneca', '2021-01-01', '2021-10-01', 'China', 9),
-(3, 'Panadol', 'viên nén', 11, 2, 100, 200, 1, 'Panadol', '2018-04-04', '2021-10-01', 'US', 100);
+INSERT INTO `drugs` (`id`, `name`, `type`, `barcode`, `dose`, `code`, `cost_price`, `selling_pricve`, `expiry`, `company_name`, `production_date`, `expiration_date`, `place`, `quantity`) VALUES
+(1, 'Astra', 'vaccine', 1, 1, 1, 1000, 1200, 0, 'AstraZeneca', '2021-03-03', '2021-10-13', 'UK', 10),
+(2, 'Moderna', 'vaccine', 2, 1, 3, 900, 1000, 0, 'AstraZeneca', '2021-01-01', '2021-10-01', 'China', 9),
+(3, 'Panadol', 'viên nén', 11, 2, 4, 100, 200, 1, 'Panadol', '2018-04-04', '2021-10-01', 'US', 100);
 
 --
 -- Indexes for dumped tables
